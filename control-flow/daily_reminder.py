@@ -12,15 +12,4 @@ match priority:
     case _:
         base = f"Reminder: '{task}' has an unspecified priority"
 
-print(
-    f"{base}"
-    + (
-        " that requires immediate attention today!"
-        if time_bound == "yes" and priority in ["high", "medium"]
-        else " that should be done soon."
-        if time_bound == "yes"
-        else ". Consider completing it when you have free time."
-        if priority == "low"
-        else "."
-    )
-)
+print(f"{base}" + ( " that requires immediate attention today!" if time_bound == "yes" and priority in ["high", "medium"] else " that should be done soon." if time_bound == "yes" else ". Consider completing it when you have free time." if priority == "low" else "." ))
