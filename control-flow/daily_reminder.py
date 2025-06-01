@@ -1,5 +1,3 @@
-
-
 def main():
     
     task = input("Enter your task: ")
